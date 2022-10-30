@@ -1,0 +1,3 @@
+1.即使设置了AnchorUnderMouse： setResizeAnchor(QGraphicsView::AnchorUnderMouse),在通过鼠标滚动缩放时，在边界处是不以鼠标指针所在位置为中心的，
+按照网上搜索的一些方法(计算新的位置，平移之类的)也是不行的，后来发现这个是和scene的大小相关的，当缩放到scene小于view时，在边界处的缩放是有问题
+的，一个替代方案是现在缩放范围，使得缩到最小的时候scene也是比veiw大，这样在边界处进行缩放也是以鼠标为中心的。
